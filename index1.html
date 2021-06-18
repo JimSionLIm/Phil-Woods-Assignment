@@ -1,0 +1,90 @@
+<!-- mOdified by Jim from original index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./human_standard_token_abi.js"></script>
+    <script type="text/javascript" src="./erc20balance1.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <img class="logo" src="alliance1.gif">
+        <div class="row">
+        <div id="colleft" class="column">
+        <!-- <form name="myForm" >  -->
+            <!-- IF WE ADD onsubmit="return postData(this);" INTO THE FORM ELEMENT, IT WILL RESULT IN DOUBLE SUBMISSION OF FORM VALUE -->
+           
+                <legend>My Profile</legend>
+                <label>ID No.: </label>
+                <input id="MemberID" autocomplete="off" /><br>
+
+
+                <!-- <label for="GivenName">Given name</label> -->
+                <label>Name: </label>
+                <input id="GivenName" autocomplete="off" autofocus />
+                
+                <label for="LastName">Last name</label>
+                <input name="LastName" id="LastName" autocomplete="off" autofocus />
+                <br/>         
+
+            <br>
+           
+                <legend>House Preferences</legend>
+                <label for="NoOfBedrooms">No. of Bedroom?</label>
+                <input name="NoOfBedrooms" id="NoOfBedrooms" type="range" min="1" max="3" step="1" value="1" />
+                <output name="noboutput" id="NoOfBedrooms">3</output>
+                <br/>
+                <label for="Budget">Budget allocated $ </label>
+                <input type="text" name="Budget" id="Budget" autocomplete="off" />
+
+                <label for="Loc">Preferred Location</label>
+                <input list="locationoptions" id="Loc" name="Loc" />
+                <datalist id="locationoptions">
+                    <option value="Bugis"></option>
+                    <option value="Tanjong Pagar"></option>
+                    <option value="Marina Bay"></option>
+                </datalist>
+
+
+                <br>    <br>
+             
+                <button class = "btn" onclick="postData()">Create my Profile!</button>
+
+                <button class = "btn" onclick="updateData()">Update my Profile!</button>
+              
+                <br>   <br>    <br>
+
+
+
+                <legend>My ETH Portfolio</legend>
+    <p>can I afford a MacDo meal ? : .....     
+    <!-- <input type="text" size="50" id="address" /> -->
+    <button class = "btn"  type="button" onClick="getBalance();">Check my ETH Holdings </button></p>
+    
+    <div id="output"></div>
+    <p>Check if you're still a billionaire : 
+    <!-- <input type="text" size="50" id="contractAddress" /> -->
+    <button class = "btn" type="button" onClick="getERC20Balance();">Check my ERC20 JIM Tokens</button></p>
+   
+    <div id="output2"></div>
+             
+            <!-- <button type="submit" formmethod = "GET" id = "findMatch" class = "btn1" onclick="findMatch()">Find me a Match! </button>   -->
+            <br>
+        <button  class = "btn" onclick="getFromServer()">Show All Profiles</button>
+
+        <button  class = "btn" onclick="getFromServerid()">Get ID</button>
+
+        <button class = "btn" onclick="deleteData()">I'm Out </button>
+
+</div>
+    <div class="colright" id="colright"> </div> <br>
+    
+</div>
+
+</body>
+</html>
